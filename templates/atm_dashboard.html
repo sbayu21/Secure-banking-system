@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATM Dashboard</title>
+</head>
+<body>
+    <h2>Welcome, {{ user_id }}</h2>
+
+    <form method="post">
+        <button name="command" value="balance">Check Balance</button>
+        <button name="command" value="deposit">Deposit</button>
+        <button name="command" value="withdraw">Withdraw</button>
+        <button name="command" value="activity">View Activity</button>
+        <button name="command" value="quit">Logout</button>
+    </form>
+
+    {% if result %}
+        <p><strong>Result:</strong> {{ result }}</p>
+    {% endif %}
+</body>
+</html>

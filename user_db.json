@@ -1,0 +1,91 @@
+{
+    "124356": {
+        "password": "testpass",
+        "balance": 550,
+        "activity": [
+            {
+                "action": "deposit",
+                "amount": 100
+            },
+            {
+                "action": "withdraw",
+                "amount": 50
+            },
+            {
+                "action": "deposit",
+                "amount": 100
+            },
+            {
+                "action": "withdraw",
+                "amount": 50
+            },
+            {
+                "action": "deposit",
+                "amount": 100
+            },
+            {
+                "action": "withdraw",
+                "amount": 50
+            },
+            {
+                "action": "withdraw",
+                "amount": 50
+            },
+            {
+                "action": "withdraw",
+                "amount": 50
+            },
+            {
+                "action": "deposit",
+                "amount": 100
+            },
+            {
+                "action": "withdraw",
+                "amount": 50
+            }
+        ]
+    },
+    "987654": {
+        "password": "secure123",
+        "balance": 1000,
+        "activity": []
+    },
+    "123456": {
+        "password": "test123",
+        "balance": 350,
+        "activity": [
+            {
+                "action": "deposit",
+                "amount": 100
+            },
+            {
+                "action": "withdraw",
+                "amount": 50
+            },
+            {
+                "action": "deposit",
+                "amount": 100
+            },
+            {
+                "action": "deposit",
+                "amount": 100
+            },
+            {
+                "action": "withdraw",
+                "amount": 50
+            },
+            {
+                "action": "deposit",
+                "amount": 100
+            },
+            {
+                "action": "withdraw",
+                "amount": 50
+            },
+            {
+                "action": "deposit",
+                "amount": 100
+            }
+        ]
+    }
+}
