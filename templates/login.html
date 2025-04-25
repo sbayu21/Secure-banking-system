@@ -3,33 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>ATM Login</title>
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-    <h2>ATM Login</h2>
+    <div class="login-layout">
 
-    {% if error %}
-        <p style="color: red;">{{ error }}</p>
-    {% endif %}
+        <!--Left ssection-->
+        <div class = "left-content">
+            <h1 class="main-heading">Welcome to XYZ Bank</h1>
+            <p class="tagline">Secure Banking. Anytime, Anywhere.</p>
+        </div>
 
-    <form action="/" method="POST">
-        <label for="atm_id">ATM ID:</label>
-        <input type="text" id="atm_id" name="atm_id" required><br>
 
-        <label for="user_id">User ID:</label>
-        <input type="text" id="user_id" name="user_id" required><br>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br>
 
-        <label for="signature">Signature Method:</label>
-        <select id="signature" name="signature" required>
-            <option value="rsa">RSA</option>
-            <option value="dsa">DSA</option>
-        </select><br><br>
+        <!--Right section -->
+        <div class="right-content">
+            <div class="container"> 
+                <h2>ATM Login</h2>
 
-        <input type="submit" value="Login">
-    </form>
+                {% if error %}
+                <p style="color: red;">{{ error }}</p>
+                {% endif %}
 
-    <p><a href="/signup">New user? Sign up here</a></p>
+                <form action="/" method="POST">
+                    <label for="atm_id">ATM ID:</label>
+                    <input type="text" id="atm_id" name="atm_id" required><br>
+
+                    <label for="user_id">User ID:</label>
+                    <input type="text" id="user_id" name="user_id" required><br>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required><br>
+
+                    <label for="signature">Signature Method:</label>
+                    <select id="signature" name="signature" required>
+                        <option value="rsa">RSA</option>
+                        <option value="dsa">DSA</option>
+                    </select><br><br>
+
+                    <input type="submit" value="Login">
+                </form>
+
+                <p><a href="/signup">New user? Sign up here</a></p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -2,11 +2,13 @@
 <html>
 <head>
     <title>ATM Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="dashboard-container">
     <h2>Welcome, {{ user_id }}</h2>
 
-    <form method="post">
+    <form method="post" class="dashboard-grid">
         <button name="command" value="balance">Check Balance</button>
         <button name="command" value="deposit">Deposit</button>
         <button name="command" value="withdraw">Withdraw</button>
@@ -17,5 +19,6 @@
     {% if result %}
         <p><strong>Result:</strong> {{ result }}</p>
     {% endif %}
+    </div>
 </body>
 </html>

@@ -1,0 +1,347 @@
+/* Reset & Base - Global box sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Base styles - Bright, professional layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #edf3f8, #e3ecf7);
+    color: #2c3e50;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+
+/*login.html css styling
+
+/* Two-column layout wrapper */
+.login-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px 20px;
+}
+
+/* Left section for heading + tagline */
+.left-content {
+    flex: 1;
+    text-align: left;
+    max-width: 400px;
+}
+
+/* Main title above login card */
+.main-heading {
+    font-size: 28px;
+    font-weight: 700;
+    color: #003366;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+/* Tagline under the main heading */
+.tagline {
+    font-size: 16px;
+    color: #55667a;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* Right section for form */
+.right-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Main container - card layout */
+.container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 35px;
+    border-radius: 24px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 25px rgba(0, 50, 100, 0.12);
+    overflow: hidden; /* Ensures border doesn't overflow */
+    margin: 60px auto;
+}
+
+/* Outer animated border */
+.container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background: linear-gradient(60deg, #42a5f5, #7e57c2, #26c6da, #42a5f5);
+    background-size: 300% 300%;
+    animation: rotateBorder 2s linear infinite;
+    border-radius: 30px;
+}
+
+/* Inner cover to create "gap" illusion */
+.container::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    z-index: -1;
+    background: #ffffff; /* Match the form background */
+    border-radius: 22px;
+}
+
+/* Rotation animation */
+@keyframes rotateBorder {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Title */
+/* Animated gradient heading */
+.container h2 {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    color: #004a99;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideFadeIn 1s ease-out forwards;
+}
+
+/* Slide & fade-in effect */
+@keyframes slideFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Optional shimmer effect for heading */
+.shimmer {
+    background: linear-gradient(90deg, #004a99, #42a5f5, #004a99);
+    background-size: 200% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: shimmer 2.5s linear infinite, slideFadeIn 1s ease-out forwards;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% center;
+    }
+    100% {
+        background-position: -200% center;
+    }
+}
+
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #37474f;
+}
+
+/* Inputs and select */
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #cfd8dc;
+    border-radius: 8px;
+    background-color: #fefefe;
+    font-size: 15px;
+    color: #2c3e50;
+    transition: all 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.15);
+    outline: none;
+}
+
+/* Placeholder text */
+::placeholder {
+    color: #aab2bd;
+}
+
+/* Submit button */
+input[type="submit"],
+button {
+    width: 100%;
+    margin-top: 35px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #1565c0, #42a5f5);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background: linear-gradient(90deg, #0d47a1, #1e88e5);
+}
+
+input[type="submit"]:active,
+button:active {
+    transform: scale(0.98);
+}
+
+/* Error box */
+.error {
+    margin-top: 18px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #c62828;
+    background-color: #fdecea;
+    border: 1px solid #f5c6cb;
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Signup link */
+a {
+    color: #1565c0;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+
+/* Responsive tweak */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*ATM dash bord continer for atm_dashbord.html
+
+/* Dashboard Container - now full-screen and styled */
+.dashboard-container {
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f0f4f8, #e3ebf2);
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+/* Title inside dashboard */
+.dashboard-container h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #003366;
+    text-align: center;
+}
+
+/* Dashboard button grid layout */
+.dashboard-container form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Button styles */
+.dashboard-container form button {
+    padding: 16px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: #1565c0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.dashboard-container form button:hover {
+    background-color: #0d47a1;
+}
+
+.dashboard-container form button:active {
+    transform: scale(0.98);
+}
+
+/* Result display */
+.dashboard-container p {
+    margin-top: 40px;
+    font-size: 16px;
+    color: #2e3c50;
+}
