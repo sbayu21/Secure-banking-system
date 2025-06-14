@@ -4,8 +4,8 @@
 **Professor: Mikhail Gofman**
 
 ## Team Members
-- **Simegnew Bayu** – Backend Developer  
-- **Sagarkumar Patel** – Front-end Developer
+- **Simegnew Bayu**
+- **Sagarkumar Patel** 
 
 ---
 
