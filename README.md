@@ -69,24 +69,77 @@ The system includes:
    ```bash
    git clone https://github.com/your-username/SecureBank.git
    cd SecureBank
+   ```
    
 2. Create and activate a virtual environment:
    
    ```bash
    python3 -m venv venv
    source venv/bin/activate
+   ```
    
 3. Install dependencies:
 
    ```bash
    pip install -r requirements.txt
+   ```
 
 4. Start the Bank Server:
 
    ```bash
    python bank_api.py
+   ```
 
 5. Start the ATM Client:
    ```bash
    python app.py
+   ```
+
+   ---
+
+## 🧪 How to Use
+
+- **Login**: Use a 6-digit user ID and password
+- **Operations**: Choose from:
+  - Balance Inquiry
+  - Deposit
+  - Withdraw
+  - View Activity Log
+- **Security**: All requests are digitally signed and encrypted
+
+---
+
+## ⚠️ Notes & Warnings
+
+- **For Educational Use Only**:  
+  This project is intended solely for academic purposes in CS-352. It is not production-ready or suitable for real banking environments.
+
+- **No Real Financial Transactions**:  
+  The system simulates transactions for learning purposes. It does **not** interface with any actual financial services or networks.
+
+- **Key & Credential Management**:  
+  In a real-world system, cryptographic keys and credentials should be stored securely using key vaults or hardware modules. This project uses JSON and local files for simplicity and demonstration only.
+
+- **Security Assumptions**:  
+  While strong cryptographic primitives are used (RSA/DSA), aspects like TLS certificates, key expiration, nonce/timestamp verification, and 2FA are **not fully implemented**. These would be necessary in a real deployment.
+
+- **Run Locally in a Safe Environment**:  
+  Do not expose the app to the public internet or run it in production-like environments. Localhost testing is strongly recommended.
+
+---
+
+## 📈 Future Enhancements
+
+- Add timestamp/nonce to prevent replay attacks
+- Upgrade to SQLite/PostgreSQL backend
+- Implement mutual TLS authentication
+- Integrate 2FA (OTP or biometric)
+- Key rotation and expiration handling
+- Role-based access control for bank admin
+
+---
+
+## 🏁 Conclusion
+
+The SecureBank System demonstrates a comprehensive, secure, and user-friendly banking infrastructure. It employs real-world cryptographic techniques to protect sensitive data and enforce strong authentication, making it a practical model for secure financial software.
    
