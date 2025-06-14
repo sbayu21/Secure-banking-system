@@ -32,6 +32,15 @@ The system includes:
 
 ---
 
+## 🔗 Live Demo
+
+Check out the working demo of the SecureBank System:  
+[🔒 SecureBank Demo](https://youtu.be/Z_EFs54Y3VQ?si=X18qu74lEA3zyjqN)
+
+> _Note: Demo is hosted for preview only. Login credentials and sensitive features are simulated for academic purposes._
+
+---
+
 ## 🏗️ System Architecture
 
 ### Components
