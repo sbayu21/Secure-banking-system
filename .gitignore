@@ -1,0 +1,4 @@
+
+# Ignore certificates and keys
+certs/
+*.pem
